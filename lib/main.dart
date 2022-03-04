@@ -1,7 +1,7 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'loginPage.dart';
 
 //Starting Point
 void main() {
@@ -10,12 +10,12 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-  final dynamic title2 = 'Flutter Demo';
+  //final dynamic title = 'Flutter Demo2';
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: title2,
+      //title: title,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -28,7 +28,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         //primarySwatch: Colors.lightBlue,
       ),
-      home: const MyHomePage(title:'Flutter Demo',),
+      home: LoginScreen()
+
+//      home: const MyHomePage(title:'Flutter Demo',),
     );
   }
 }
@@ -50,19 +52,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+
 
   //Function
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter ++;
-    });
-  }
 
   //Function Get User Data from API
   Future<List<User>> _getuserData() async{
