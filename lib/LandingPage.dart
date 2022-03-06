@@ -48,6 +48,7 @@ class _LandingPageState extends State<LandingPage>{
                             fontStyle: FontStyle.italic,
                           ),
                         ),
+                        buildIcon1(),
 
                       ],
                     ),
@@ -59,4 +60,29 @@ class _LandingPageState extends State<LandingPage>{
       ),
     );
   }
+}
+
+//Icon1 Button
+Widget buildIcon1( ){
+  return Container(
+    width: 100,
+    height: 100,
+    child: ElevatedButton.icon(
+      onPressed: () {
+        print("buildIcon1");
+      },
+      icon: Icon(Icons.plumbing),
+      label: Text('plumber'),
+      style: ElevatedButton.styleFrom(
+          primary: Colors.black12,//Box Color
+          side: BorderSide(color: Colors.black),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10), // <-- Radius
+          )
+        //shape: StadiumBorder()
+        //padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+      ),
+
+    ),
+  );
 }

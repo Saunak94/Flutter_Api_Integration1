@@ -310,7 +310,7 @@ Widget buildSignupBtn(BuildContext context){
     ),
   );
 }
-//Forgot Password
+//Skip to Main Page
 Widget buildSkipBtn(BuildContext context){
   return Container(
     alignment: Alignment.center,

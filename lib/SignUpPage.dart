@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:apptest1/LandingPage.dart';
+import 'package:apptest1/AddInfoPage.dart';
 
 class SignUpPage extends StatefulWidget{
   @override
@@ -318,7 +319,7 @@ Widget buildSubmitBtn(BuildContext context){
     child: ElevatedButton(
       onPressed: () {
         print("Signup Button Pressed");
-        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => LandingPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => AddInfoPage()));
       },
       style: ElevatedButton.styleFrom(
           primary: Colors.green,//Box Color
